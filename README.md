@@ -24,6 +24,7 @@ https://github.com/kamisa1999-chipmunk/teamlead-skills
 | `skills/story-prep` | DeliveryStory до системного анализа; в Jira — через `jira-write` |
 | `skills/sa-task-prep` | постановка задачи аналитику по готовой Story; в Jira — через `jira-write` |
 | `skills/solution-research` | варианты решения и recommendation, без выбора архитектуры за команду |
+| `skills/meeting-agenda` | повестка встречи; для груминга — слот, темы из Jira и черновик в Mattermost |
 | `skills/quarter-gantt` | очередь квартала и Гант по ёмкости команды |
 | `skills/sprint-planning` | снимок, готовность и черновик следующего спринта |
 | `skills/backlog-hygiene` | read-only аудит бэклога, без записи в Jira |
@@ -32,7 +33,7 @@ https://github.com/kamisa1999-chipmunk/teamlead-skills
 git clone https://github.com/kamisa1999-chipmunk/teamlead-skills.git
 cd teamlead-skills
 mkdir -p ~/.cursor/skills
-for skill in 1-1 meeting-context observations action-items feature-assessment story-prep sa-task-prep solution-research quarter-gantt sprint-planning backlog-hygiene; do
+for skill in 1-1 meeting-context observations action-items meeting-agenda feature-assessment story-prep sa-task-prep solution-research quarter-gantt sprint-planning backlog-hygiene; do
   ln -sfn "$(pwd)/skills/$skill" ~/.cursor/skills/$skill
 done
 ```
@@ -51,6 +52,7 @@ done
 подготовь story
 подготовь SA-задачу
 проработай техническое решение
+подготовь повестку груминга
 построй гант квартала
 подготовь следующий спринт
 ```
@@ -85,7 +87,7 @@ done
 
 ```bash
 mkdir -p ~/.zcode/skills
-for skill in 1-1 meeting-context observations action-items feature-assessment story-prep sa-task-prep solution-research quarter-gantt sprint-planning backlog-hygiene; do
+for skill in 1-1 meeting-context observations action-items meeting-agenda feature-assessment story-prep sa-task-prep solution-research quarter-gantt sprint-planning backlog-hygiene; do
   ln -sfn "$(pwd)/skills/$skill" ~/.zcode/skills/$skill
 done
 ```
