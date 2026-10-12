@@ -1,0 +1,9 @@
+{
+  "name": "teamlead-skills",
+  "plugins": [
+    {
+      "name": "teamlead-skills",
+      "source": "."
+    }
+  ]
+}
