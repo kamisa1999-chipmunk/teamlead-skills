@@ -1,0 +1,35 @@
+title: Q3 BookShelf
+quarter: Q3-2026
+from: 2026-07-01
+to: 2026-09-30
+holidays: []
+planning:
+  goal: maximize_priority
+releases:
+  - { version: "1.40", date: 2026-08-17 }
+size_days:
+  XS: 2
+  S: 3
+  M: 5
+  L: 10
+  XL: 15
+people:
+  - id: alisa
+    name: Алиса
+    lanes: [web]
+    capacity: 1.0
+    time_off:
+      - { from: 2026-07-06, to: 2026-07-17 }
+items:
+  - id: Q3-01
+    title: Список чтения
+    jira: SHELF-120
+    must: false
+    priority: 70
+    value: 60
+    order_hint: 0
+    target_release: "1.40"
+    kind: development
+    bars:
+      - { lane: web, days: 5 }
+      - { lane: web, estimate_status: unknown, contingent: true }

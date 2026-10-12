@@ -1,0 +1,19 @@
+@startuml reading-list-target-state
+title SHELF-120 recommendation, не решение — отдельный список
+
+skinparam shadowing false
+
+actor "Читатель" as U
+participant "Web" as FE
+participant "Lists API" as Lists
+database "Списки читателя" as DB
+participant "Book API" as Books
+
+U -> FE: «в список» на карточке
+FE -> Lists: добавить книгу в список
+Lists -> DB: список читателя + id книги
+FE -> Books: карточка книги, без поля списков
+Books --> FE
+FE -> U: пустой список или полка
+
+@enduml

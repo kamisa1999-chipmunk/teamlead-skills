@@ -17,6 +17,8 @@ description: >-
 
 **Куда пишет:** `notes/leadership/kamilla-saidova.md` → `## Мои action items`
 
+Вымышленный образец секции — `examples/leadership/teamlead.md` (от этой папки: `../../examples/`).
+
 ## Связка с другими скиллами
 
 | Скилл | Когда вызывать `action-items` |

@@ -1,0 +1,18 @@
+@startuml reading-list-current-state
+title SHELF-120 current state — только избранное
+
+skinparam shadowing false
+
+actor "Читатель" as U
+participant "Web" as FE
+participant "Book API" as API
+database "Книга" as DB
+
+U -> FE: сердечко на карточке
+FE -> API: добавить в избранное
+API -> DB: id книги в массив избранного
+DB --> API
+API --> FE
+FE -> U: сердечко закрашено
+
+@enduml
